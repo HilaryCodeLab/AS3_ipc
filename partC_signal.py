@@ -16,8 +16,8 @@ def signal_handler(signum, frame):
     exit(0)
 
 
-# if __name__ == '__main__':
-print("in 5 second, press ctrl c to initiate SIGINT command or do nothing ")
-signal.signal(signal.SIGINT, signal_handler)
-time.sleep(5)
-print("program exit after it reached 5 second")
+if __name__ == '__main__':
+    print("in 5 second, press ctrl c to initiate SIGINT command or do nothing ")
+    signal.signal(signal.SIGINT, signal_handler)
+    time.sleep(5)
+    print("program exit after it reached 5 second")
