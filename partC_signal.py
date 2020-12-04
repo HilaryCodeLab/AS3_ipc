@@ -2,9 +2,16 @@ import signal
 import time
 
 
-# please run this code on repl.it
+"""This module is to implement signal to interrupt program execution, 
+in order to run properly please copy and paste the code on repl.it """
+
 
 def signal_handler(signum, frame):
+    """
+
+    :param signum:
+    :param frame:
+    """
     print("You have pressed ctrl c which stop the program")
     exit(0)
 

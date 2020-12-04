@@ -7,8 +7,16 @@ filebuffer = ["colorise==1.0.1\n", "grpcio==1.33.2\n", "grpcio-tools==1.33.2\n",
 filehandle.writelines(filebuffer)
 filehandle.close()
 
+
 class Colour1:
+    """
+    GUI component of main window for actual colors
+    """
     def __init__(self, master):
+        """
+
+        :param master:
+        """
         self.master = master
         # self.frame = tk.Frame(self.master)
         self.btn1 = tk.Button(self.master, text="open new window", command=self.open_new_window)
@@ -52,6 +60,7 @@ class Colour1:
 
 
 class Colour2:
+    """GUI component of second window for complementary colours"""
     def __init__(self, master2):
         self.master2 = master2
         # self.frame = tk.Frame(self.master)
@@ -82,7 +91,14 @@ class Colour2:
 
 
 class Instruction:
+    """
+    GUI component for instruction window
+    """
     def __init__(self, master3):
+        """
+
+        :param master3:
+        """
         self.master3 = master3
         # self.frame = tk.Frame(self.master)
         self.closeBtn = tk.Button(self.master3, text="Close", command=self.close_window )

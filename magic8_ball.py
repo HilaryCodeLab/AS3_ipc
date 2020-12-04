@@ -28,6 +28,9 @@ responses = [
 
 
 def pipe_server():
+    """
+    create a server pipe to read and write file from and to the client
+    """
     print("pipe server")
     pipe = win32pipe.CreateNamedPipe(
         r'\\.\pipe\Foo',
@@ -52,6 +55,9 @@ def pipe_server():
 
 
 def pipe_client():
+    """
+    connect to server pipe to send and receive request
+    """
     print("pipe client")
     quit = False
     print("type q to exit the program")
@@ -84,13 +90,13 @@ def pipe_client():
                 print("broken pipe, bye bye")
                 quit = True
 
-pipe_server()
-# if __name__ == '__main__':
-#     if len(sys.argv) < 2:
-#         print("need s or c as argument")
-#     elif sys.argv[1] == "s":
-#         pipe_server()
-#     elif sys.argv[1] == "c":
-#         pipe_client()
-#     else:
-#         print(f"no can do: {sys.argv[1]}")
+
+if __name__ == '__main__':
+    if len(sys.argv) < 2:
+        print("need s or c as argument")
+    elif sys.argv[1] == "s":
+        pipe_server()
+    elif sys.argv[1] == "c":
+        pipe_client()
+    else:
+        print(f"no can do: {sys.argv[1]}")
